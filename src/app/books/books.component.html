@@ -1,10 +1,10 @@
 <div class="books-container">
   <mat-toolbar color="primary" class="create-toolbar">
     <mat-toolbar-row>
-      <span class="title">All Books</span>
+      <span class="title">All Repair Books</span>
       <div class="button-row">
         <button (click)="goToCreate()" mat-raised-button color="accent" class="pull-right">
-          Create a Book
+          Create a Repair Book
           <mat-icon class="example-icon">add_circle</mat-icon>
         </button>
       </div>
@@ -21,9 +21,9 @@
       <img class="list-cover-image" mat-card-image [src]="book.image_url" alt="book">
       <mat-card-content>
         <p>ID: {{book.id}}</p>
-        <P>Author: {{book.author}}</P>
-        <P>Genre: {{book.genre}}</P>
-        <P>Read: {{book.read}}</P>
+        <P>Make: {{book.author}}</P>
+        <P>Model: {{book.genre}}</P>
+        <P>In Stock: {{book.read}}</P>
       </mat-card-content>
       <mat-card-actions class="btn-action-grid">
         <button mat-raised-button (click)="deleteBook(book.id)" color="warn">

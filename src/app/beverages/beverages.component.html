@@ -1,10 +1,10 @@
 <div class="books-container">
   <mat-toolbar color="primary" class="create-toolbar">
     <mat-toolbar-row>
-      <span class="title">All Beverages</span>
+      <span class="title">All Vehicles</span>
       <div class="button-row">
         <button (click)="goToCreate()" mat-raised-button color="accent" class="pull-right">
-          Create a Beverage
+          Create a Vehicle
           <mat-icon class="example-icon">add_circle</mat-icon>
         </button>
       </div>
@@ -21,9 +21,9 @@
       <img mat-card-image [src]="bev.image_url" alt="beverage">
       <mat-card-content>
         <p>ID: {{bev.id}}</p>
-        <P>Beverage Name: {{bev.beverage_name}}</P>
-        <P>Alcohol Level: {{bev.alcohol_level}}</P>
-        <P>Volume: {{bev.volume}}</P>
+        <P>Year: {{bev.beverage_name}}</P>
+        <P>Make: {{bev.alcohol_level}}</P>
+        <P>Model: {{bev.volume}}</P>
         <P>Price: {{bev.price}}</P>
       </mat-card-content>
       <mat-card-actions class="btn-action-grid">
