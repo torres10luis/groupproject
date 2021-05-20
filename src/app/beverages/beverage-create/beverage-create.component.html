@@ -1,10 +1,10 @@
 <mat-card class="input-container">
-    <mat-toolbar color="primary" class="create-toolbar">
+    <mat-toolbar color="secondary" class="create-toolbar">
       <mat-toolbar-row>
-        <span class="copyright">Create a Vehicle</span>
+        <span class="copyright">Create a drink</span>
         <div class="button-row">
           <button [routerLink]="['/beverages']" mat-raised-button color="accent" class="pull-right">
-            Back to Vehicles List
+            Back to cafe List
             <mat-icon class="example-icon">arrow_back</mat-icon>
           </button>
         </div>
@@ -15,15 +15,15 @@
       <div class="container">
         <img *ngIf="beverage.image_url" mat-card-image [src]="beverage.image_url" alt="beverage">
         <mat-form-field class="input">
-          <input [(ngModel)]="beverage.beverage_name" matInput placeholder="Year" required>
+          <input [(ngModel)]="beverage.beverage_name" matInput placeholder="Drink Name" required>
         </mat-form-field>
   
         <mat-form-field class="input">
-          <input [(ngModel)]="beverage.alcohol_level" matInput placeholder="Make" required>
+          <input [(ngModel)]="beverage.alcohol_level" matInput placeholder="Sugar Level (1-5 Sweetness)" required>
         </mat-form-field>
   
         <mat-form-field class="input">
-          <input [(ngModel)]="beverage.volume" matInput placeholder="Model" required>
+          <input [(ngModel)]="beverage.volume" matInput placeholder="Ice/Hot" required>
         </mat-form-field>
 
         <mat-form-field class="input">
@@ -36,7 +36,7 @@
       </div>
     </mat-card-content>
     <mat-card-actions>
-      <button mat-raised-button (click)="createBeverage(beverage)" color="primary">Create Vehicle</button>
+      <button mat-raised-button (click)="createBeverage(beverage)" color="primary">Create Drink</button>
     </mat-card-actions>
   </mat-card>
   

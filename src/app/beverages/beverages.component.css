@@ -4,6 +4,7 @@
   grid-gap: 2em;
   margin: 30px auto;
   background-color: #ececec;
+  opacity: .9;
 
 }
 
@@ -30,9 +31,18 @@
 
 .grow:hover {
   transform: scale(1.1);
+  opacity: 1;
 }
 
 .btn-action-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
+}
+ .section-title{
+  background-color: aliceblue;
+  padding: 20px;
+  opacity: 0.9;
+}
+.headings{
+  text-align: center;
 }

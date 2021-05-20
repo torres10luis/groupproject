@@ -1,10 +1,55 @@
+<section class="section-title">
+  <div>
+    <h1 class="headings">
+      Welcome to the Cafe Lotus Drink Section
+    </h1>
+  </div>
+
+  <div>
+    <h3 class="headings">It is important that we take care of the equipment here at Cafe Lotus like as if it were your very own computers at home</h3>
+    <h4>Here are some of the requirements here at Cafe Lotus</h4>
+    <ul>
+      <li>No food or open drinks close to the computers, there is a designated eating area</li>
+      <li>Below you will have a list of beverages you can enjoy here at Cafe Lotus while using our services </li>
+      <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate error atque sed officia perspiciatis quia accusamus expedita aut eum id corrupti sunt quaerat repellendus ipsum, impedit porro dolorem, reprehenderit sequi?</li>
+      <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam est voluptatum asperiores ullam consequuntur itaque quo amet? Maiores illo rem numquam quibusdam quisquam, possimus provident cum, alias hic deleniti facilis.</li>
+      <li><h1>Most importantly enjoy your time here</h1></li>
+    </ul>
+  </div>
+</section>
+
 <div class="books-container">
-  <mat-toolbar color="primary" class="create-toolbar">
+  <mat-toolbar color="secondary" class="create-toolbar">
     <mat-toolbar-row>
-      <span class="title">All Vehicles</span>
+      <span class="title"><h1>Current Favorite Drinks Below</h1></span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <div class="book-card-container">
+    <mat-card class="grow item-card" *ngFor="let bev of beverages; let i = index">
+      <mat-toolbar color="warn" class="toolbar">
+        <mat-toolbar-row>
+          <mat-card-title>{{bev.beverage_name}}</mat-card-title>
+          <mat-card-subtitle></mat-card-subtitle>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <img mat-card-image [src]="bev.image_url" alt="beverage">
+      <mat-card-content>
+        <p>ID: {{bev.id}}</p>
+        <P>Name of drink: {{bev.beverage_name}}</P>
+        <P>Sugar Level (1-5): {{bev.alcohol_level}}</P>
+        <P>Ice/Hot: {{bev.volume}}</P>
+        <P>Price: {{bev.price}}</P>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>
+<div class="books-container">
+  <mat-toolbar color="secondary" class="create-toolbar">
+    <mat-toolbar-row>
+      <span class="title">Edit/Add Current Drinks</span>
       <div class="button-row">
         <button (click)="goToCreate()" mat-raised-button color="accent" class="pull-right">
-          Create a Vehicle
+          Create a Drink
           <mat-icon class="example-icon">add_circle</mat-icon>
         </button>
       </div>
@@ -21,9 +66,9 @@
       <img mat-card-image [src]="bev.image_url" alt="beverage">
       <mat-card-content>
         <p>ID: {{bev.id}}</p>
-        <P>Year: {{bev.beverage_name}}</P>
-        <P>Make: {{bev.alcohol_level}}</P>
-        <P>Model: {{bev.volume}}</P>
+        <P>Name of drink: {{bev.beverage_name}}</P>
+        <P>Sugar Level (1-5): {{bev.alcohol_level}}</P>
+        <P>Ice/Hot: {{bev.volume}}</P>
         <P>Price: {{bev.price}}</P>
       </mat-card-content>
       <mat-card-actions class="btn-action-grid">
@@ -39,3 +84,4 @@
     </mat-card>
   </div>
 </div>
+
